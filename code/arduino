@@ -1,0 +1,105 @@
+int sensor1 = 2;
+int sensor2 = 3;
+int sensor3 = 4;
+int sensor4 = 5;
+int sensor5 = 6;
+int sensor6 = 7;
+int sensor7 = 8;
+int sensor8 = 9;
+int sensor9 = 10;
+int sensor10 = 11;
+int sensor11 = 12;
+
+void setup()  {
+  pinMode (sensor1, INPUT);
+  pinMode (sensor2, INPUT);
+  pinMode (sensor3, INPUT);
+  pinMode (sensor4, INPUT);
+  pinMode (sensor5, INPUT);
+  pinMode (sensor6, INPUT);
+  pinMode (sensor7, INPUT);
+  pinMode (sensor8, INPUT);
+  pinMode (sensor9, INPUT);
+  pinMode (sensor10, INPUT);
+  pinMode (sensor11, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int objek1 = digitalRead(sensor1);
+   if (objek1 == LOW){
+  Serial.print("Status Kanan 1: ");
+  Serial.println(objek1);
+  delay(50);
+  }
+
+  int objek2 = digitalRead(sensor2);
+  if (objek2 == LOW){
+  Serial.print("Status Kanan 2: ");
+  Serial.println(objek2);
+  delay(50);
+  }
+
+  int objek3 = digitalRead(sensor3);
+  if (objek3 == LOW){
+  Serial.print("Status Kanan 3: ");
+  Serial.println(objek3);
+  delay(50);
+  }
+
+  int objek4 = digitalRead(sensor4);
+  if (objek4 == LOW){
+  Serial.print("Status Kanan 4: ");
+  Serial.println(objek4);
+  delay(50);
+  }
+
+  int objek5 = digitalRead(sensor5);
+  if (objek5 == LOW){
+  Serial.print("Status Kanan 5: ");
+  Serial.println(objek5);
+  delay(50);
+  }
+
+  int objek6 = digitalRead(sensor6);
+  if (objek6 == LOW){
+  Serial.print("Status Kiri 5: ");
+  Serial.println(objek6);
+  delay(50);
+  }
+
+  int objek7 = digitalRead(sensor7);
+  if (objek7 == LOW){
+  Serial.print("Status Kiri 4: ");
+  Serial.println(objek7);
+  delay(50);
+  }
+
+  int objek8 = digitalRead(sensor8);
+  if (objek8 == LOW){
+  Serial.print("Status Kiri 3: ");
+  Serial.println(objek8);
+  delay(50);
+  }
+
+  int objek9 = digitalRead(sensor9);
+  if (objek9 == LOW){
+  Serial.print("Status Kiri 2: ");
+  Serial.println(objek9);
+  delay(50);
+  }
+
+  int objek10 = digitalRead(sensor10);
+  if (objek10 == LOW){
+  Serial.print("Status Kir1 1: ");
+  Serial.println(objek10);
+  delay(50);
+  }
+
+  int objek11 = digitalRead(sensor11);
+  if (objek11 == LOW){
+  Serial.print("Status Tengah: ");
+  Serial.println(objek11);
+  delay(50);
+  }
+}
