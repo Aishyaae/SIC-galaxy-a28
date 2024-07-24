@@ -1,0 +1,47 @@
+int sensor1 = 2;
+int sensor2 = 3;
+int sensor3 = 4;
+int sensor4 = 5;
+int sensor5 = 6;
+int sensor6 = 7;
+int sensor7 = 8;
+int sensor8 = 9;
+int sensor9 = 10;
+int sensor10 = 11;
+int sensor11 = 12;
+
+void setup()  {
+  pinMode (sensor1, INPUT);
+  pinMode (sensor2, INPUT);
+  pinMode (sensor3, INPUT);
+  pinMode (sensor4, INPUT);
+  pinMode (sensor5, INPUT);
+  pinMode (sensor6, INPUT);
+  pinMode (sensor7, INPUT);
+  pinMode (sensor8, INPUT);
+  pinMode (sensor9, INPUT);
+  pinMode (sensor10, INPUT);
+  pinMode (sensor11, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int objek1 = digitalRead(sensor1);
+  int objek2 = digitalRead(sensor2);
+  int objek3 = digitalRead(sensor3);
+  int objek4 = digitalRead(sensor4);
+  int objek5 = digitalRead(sensor5);
+  int objek6 = digitalRead(sensor6);
+  int objek7 = digitalRead(sensor7);
+  int objek8 = digitalRead(sensor8);
+  int objek9 = digitalRead(sensor9);
+  int objek10 = digitalRead(sensor10);
+  int objek11 = digitalRead(sensor11);
+
+  if (
+
+  String data = "sensorkanan1= " + String(objek1) + "&sensorkanan2=" + String(objek2) + "&sensorkanan3=" + String(objek3) + "&sensorkanan4=" + String(objek4) + "&sensorkanan5=" + String(objek5) + "&sensorkiri5=" + String(objek6) + "&sensorkiri4=" + String(objek7) + "&sensorkiri3=" + String(objek8) + "&sensorkiri2=" + String(objek9) + "&sensorkiri1=" + String(objek10) + "&sensortengah=" + String(objek11); 
+
+  Serial.println(data);
+  delay(100);
+}
