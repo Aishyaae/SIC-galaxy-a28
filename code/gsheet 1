@@ -1,0 +1,18 @@
+var sheet = SpreadsheetApp.openById('1usGIX5jPW5BCXmkBOSUOt-pV5WvvVdgfhdRPipfOtIA').getActiveSheet();
+var headers = [['Sensor Kanan 1', 'Sensor Kanan 2', 'Sensor Kanan 3', 'Sensor Kanan 4', 'Sensor Kanan 5', 'Sensor Tengah', 'Sensor Kiri 5', 'Sensor Kiri 4', 'Sensor Kiri 3', 'Sensor Kiri 2', 'Sensor Kiri 1']];
+var range = sheet.getRange('A1:K1');
+range.setValues(headers);
+
+function doPost(e) {  
+  var timestamp = e.parameter.timestamp;
+  var sensorIndex = parseInt(e.parameter.data);
+
+  var lastRow = sheet.getLastRow();
+  var newRow = lastRow + 1
+
+  sheet.getRange(newRow, sensorIndex).setValue(timestamp);
+
+  sheet.appendRow(row);
+  // return ContentService.createTextOutput("Success");
+  return
+}
