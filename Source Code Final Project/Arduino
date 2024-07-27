@@ -1,0 +1,117 @@
+unsigned long startMillis;  
+
+int sensor1 = 2;
+int sensor2 = 3;
+int sensor3 = 4;
+int sensor4 = 5;
+int sensor5 = 6;
+int sensor6 = 7;
+int sensor7 = 8;
+int sensor8 = 9;
+int sensor9 = 10;
+int sensor10 = 11;
+int sensor11 = 12;
+
+String value_1 = "";
+String value_2 = "";
+String value_3 = "";
+String value_4 = "";
+String value_5 = "";
+String value_6 = "";
+String value_7 = "";
+String value_8 = "";
+String value_9 = "";
+String value_10 = "";
+String value_11 = "";
+
+void setup()  {
+  pinMode(sensor1, INPUT);
+  pinMode(sensor2, INPUT);
+  pinMode(sensor3, INPUT);
+  pinMode(sensor4, INPUT);
+  pinMode(sensor5, INPUT);
+  pinMode(sensor6, INPUT);
+  pinMode(sensor7, INPUT);
+  pinMode(sensor8, INPUT);
+  pinMode(sensor9, INPUT);
+  pinMode(sensor10, INPUT);
+  pinMode(sensor11, INPUT);
+  Serial.begin(9600);
+
+  startMillis = millis();
+}
+
+void loop() {
+  int objek_1 = digitalRead(sensor1);
+  if (objek_1 == LOW) {
+    startMillis = millis(); 
+    value_1 = "0"; 
+  }
+
+  int objek_2 = digitalRead(sensor2);
+  if (objek_2 == LOW) {
+    value_2 = String((millis() - startMillis) / 1000.0, 3); 
+  }
+
+  int objek_3 = digitalRead(sensor3);
+  if (objek_3 == LOW) {
+    value_3 = String((millis() - startMillis) / 1000.0, 3); 
+  }
+
+  int objek_4 = digitalRead(sensor4);
+  if (objek_4 == LOW) {
+    value_4 = String((millis() - startMillis) / 1000.0, 3); 
+  }
+
+  int objek_5 = digitalRead(sensor5);
+  if (objek_5 == LOW) {
+    value_5 = String((millis() - startMillis) / 1000.0, 3); 
+  }
+
+  int objek_6 = digitalRead(sensor6);
+  if (objek_6 == LOW) {
+    value_6 = String((millis() - startMillis) / 1000.0, 3); 
+  }
+
+  int objek_7 = digitalRead(sensor7);
+  if (objek_7 == LOW) {
+    value_7 = String((millis() - startMillis) / 1000.0, 3); 
+  }
+
+  int objek_8 = digitalRead(sensor8);
+  if (objek_8 == LOW) {
+    value_8 = String((millis() - startMillis) / 1000.0, 3); 
+  }
+
+  int objek_9 = digitalRead(sensor9);
+  if (objek_9 == LOW) {
+    value_9 = String((millis() - startMillis) / 1000.0, 3); 
+  }
+
+  int objek_10 = digitalRead(sensor10);
+  if (objek_10 == LOW) {
+    value_10 = String((millis() - startMillis) / 1000.0, 3); 
+  }
+
+  int objek_11 = digitalRead(sensor11);
+  if (objek_11 == LOW) {
+    value_11 = String((millis() - startMillis) / 1000.0, 3); 
+  }
+
+  if (objek_10 == LOW) { 
+    String data = value_1 + "," +
+                  value_2 + "," +
+                  value_3 + "," +
+                  value_4 + "," +
+                  value_5 + "," +
+                  value_6 + "," +
+                  value_7 + "," +
+                  value_8 + "," +
+                  value_9 + "," +
+                  value_10 + "," +
+                  value_11;
+
+    Serial.println(data);
+    delay(3000);
+  }
+}
